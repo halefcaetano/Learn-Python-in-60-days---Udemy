@@ -1,0 +1,1 @@
+temperatures = [12.2, 10, "Hello"]
