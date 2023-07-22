@@ -1,0 +1,1 @@
+day_temperatures = {"morning": 12.5, "noon": 24.5, "evening": 32.4}
