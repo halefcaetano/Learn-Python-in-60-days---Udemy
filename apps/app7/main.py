@@ -13,7 +13,11 @@ try:
         filtered_data = get_data(place, days)
 
         if option == "Temperature":
-            temperatures = [dict["main"]["temp"] for dict in filtered_data]
+            temp = [dict["main"]["temp"] for dict in filtered_data]
+            temp2 = [int(i) for i in temp]
+            temperatures = []
+            for val in temp2:
+                temperatures.append(val/10)
             dates = [dict["dt_txt"] for dict in filtered_data]
             figure = px.line(x=dates, y=temperatures, labels={"x": "Date", "y": "Temperature (C)"})
             st.plotly_chart(figure)
