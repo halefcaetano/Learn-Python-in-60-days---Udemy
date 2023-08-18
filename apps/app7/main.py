@@ -18,5 +18,11 @@ if place:
         st.plotly_chart(figure)
 
     if option == "Sky":
-        filtered_data = [dict["weather"][0]["main"] for dict in filtered_data]
-        st.image()
+        images = {"Clear": "/Users/halefcaetano/Desktop/python/Learn-Python-in-60-days---Udemy/apps/app7/images/"
+                           "clear.png", "Clouds": "/Users/halefcaetano/Desktop/python/Learn-Python-in-60-days---Udemy"
+                            "/apps/app7/images/cloud.png", "Rain": "/Users/halefcaetano/Desktop/python"
+                            "/Learn-Python-in-60-days---Udemy/apps/app7/images/rain.png", "Snow": "/Users"
+                            "/halefcaetano/Desktop/python/Learn-Python-in-60-days---Udemy/apps/app7/images/snow.png"}
+        sky_conditions = [dict["weather"][0]["main"] for dict in filtered_data]
+        image_paths = [images[condition] for condition in sky_conditions]
+        st.image(image_paths, width=115)
