@@ -3,7 +3,6 @@ import streamlit as st
 import plotly.express as px
 
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
-from nltk.sentiment import SentimentIntensityAnalyzer
 
 filepaths = sorted(glob.glob("/Users/halefcaetano/Desktop/python/Learn-Python-in-60-days"
                              "---Udemy/apps/app8.2/diary/*.txt"))
@@ -19,8 +18,8 @@ for filepath in filepaths:
     positivity.append(scores["pos"])
     negativity.append(scores["neg"])
 
-dates = [name.strip(".txt").strip("/Users/halefcaetano/Desktop/python/Learn-Python-in-60-days"
-                             "---Udemy/apps/app8.2/diary/") for name in filepaths]
+
+dates = [21, 22, 23, 24, 25, 26, 27]
 
 st.title("Diary Tone")
 st.subheader("Positivity")
@@ -28,6 +27,8 @@ pos_figure = px.line(x=dates, y=positivity,
                      labels={"x": "Date", "y": "Positivity"})
 st.plotly_chart(pos_figure)
 
+
+dates = [21, 22, 23, 24, 25, 26, 27]
 st.subheader("Negativity")
 neg_figure = px.line(x=dates, y=negativity,
                      labels={"x": "Date", "y": "Negativity"})
