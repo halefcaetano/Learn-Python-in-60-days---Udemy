@@ -1,0 +1,1 @@
+Getting images from my camera and comparing them, if there is movement.

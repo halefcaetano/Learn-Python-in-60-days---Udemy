@@ -1,1 +1,1 @@
-Getting image from my camera.
+Creating image.
