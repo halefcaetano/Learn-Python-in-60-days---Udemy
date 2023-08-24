@@ -1,0 +1,1 @@
+Getting image from my camera.

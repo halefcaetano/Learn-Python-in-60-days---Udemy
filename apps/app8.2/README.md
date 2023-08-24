@@ -1,0 +1,1 @@
+Getting information from a .txt file to analyze.
