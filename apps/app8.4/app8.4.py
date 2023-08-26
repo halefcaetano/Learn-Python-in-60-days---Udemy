@@ -5,9 +5,13 @@ video = cv2.VideoCapture(0)
 time.sleep(1)
 
 first_frame = None
+count = 1
 
 while True:
     check, frame = video.read()
+    cv2.imwrite(f'/Users/halefcaetano/Desktop/python/Learn-Python-in-60-days---Udemy/apps/app8.4/images/{count}.png',
+                frame)
+    count = count + 1
     gray_frame = cv2.cvtColor(frame, cv2.COLOR_BGRA2GRAY)
     gray_frame_gau = cv2.GaussianBlur(gray_frame, (21, 21), 0)
 
