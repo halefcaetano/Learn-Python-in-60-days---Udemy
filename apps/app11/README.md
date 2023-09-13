@@ -1,1 +1,1 @@
-Build a hotel booking
+Booking a hotel
