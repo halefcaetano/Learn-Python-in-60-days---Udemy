@@ -1,1 +1,0 @@
-Build a restaurant Web App with Django
